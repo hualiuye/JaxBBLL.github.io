@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>example</title>
+  <title>baby-ui</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
   <link rel="stylesheet" href="index.css">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
@@ -26,18 +26,17 @@
 </head>
 
 <body>
-  <div class="l-row">
-    <div class="l-col-4">
-      <section class="list-group">
-        <a class="list-group__item" href="#/button">按钮</a>
-        <a class="list-group__item" href="#/alert">alert</a>
-        <a class="list-group__item" href="#/breadcrumb">breadcrumb</a>
-        <a class="list-group__item" href="#/panel">面板</a>
-        <a class="list-group__item" href="#/list">列表组</a>
-        <a class="list-group__item" href="#/media">media</a>
-      </section>
+   <div class="l-row">
+    <div class="button-group">
+      <a class="button" href="#/button">按钮</a>
+      <a class="button" href="#/alert">alert</a>
+      <a class="button" href="#/breadcrumb">breadcrumb</a>
+      <a class="button" href="#/panel">面板</a>
+      <a class="button" href="#/list">列表组</a>
+      <a class="button" href="#/media">media</a>
     </div>
-    <div class="l-col-20">
+    <div style="height: 20px;"></div>
+    <div class="l-col-24">
       <div id="app">
         <router-view></router-view>
       </div>
