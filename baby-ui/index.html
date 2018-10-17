@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>example</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <style>
+  body {
+    /*margin: 0;*/
+  }
+  
+  ul,
+  li {
+    margin: 0;
+  }
+  
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="l-row">
+    <div class="l-col-4">
+      <section class="list-group">
+        <a class="list-group__item" href="#/button">按钮</a>
+        <a class="list-group__item" href="#/alert">alert</a>
+        <a class="list-group__item" href="#/breadcrumb">breadcrumb</a>
+        <a class="list-group__item" href="#/panel">面板</a>
+        <a class="list-group__item" href="#/list">列表组</a>
+        <a class="list-group__item" href="#/media">media</a>
+      </section>
+    </div>
+    <div class="l-col-20">
+      <div id="app">
+        <router-view></router-view>
+      </div>
+    </div>
+  </div>
+  <script type="x-template" id="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb__item"><a href="#">Home</a></li>
+      <li class="breadcrumb__item"><a href="#">Library</a></li>
+      <li class="breadcrumb__item active">Data</li>
+    </ol>
+  </script>
+  <script type="x-template" id="alert">
+    <div>
+      <div class="alert">
+        <div class="alert--title">带辅助性文字介绍</div>
+        alert tip
+      </div>
+      <div class="alert alert--success">
+        <div class="alert--title">带辅助性文字介绍</div>
+        alert tip
+      </div>
+      <div class="alert alert--success">
+        <span class="alert__close">&times;</span> alert tip
+      </div>
+    </div>
+  </script>
+  <script type="x-template" id="button">
+    <div>
+      <h4>基本</h4>
+      <button class="button">按钮</button>
+      <button class="button button--primary">按钮</button>
+      <button class="button button--primary is-round">圆角按钮</button>
+      <button class="button button--primary is-circle">&#9835</button>
+      <h4>禁用按钮</h4>
+      <button class="button is-disabled">按钮</button>
+      <button class="button button--primary is-disabled">按钮</button>
+      <h4>文本按钮</h4>
+      <button class="button button--text">文本按钮</button>
+      <button class="button button--text is-disabled">禁用文本</button>
+      <button class="button button--text" disabled>禁用文本</button>
+      <h4>按钮组</h4>
+      <div class="button-group">
+        <button class="button button--primary">aa</button>
+        <button class="button">bb</button>
+        <button class="button">cc</button>
+        <button class="button">dd</button>
+        <button class="button">ee</button>
+      </div>
+    </div>
+  </script>
+  <script type="x-template" id="tag">
+    <p>
+      <span class="tag">默认</span>
+      <span class="tag tag--primary">主要的</span>
+      <span class="tag tag--primary">可以关闭的<span class="tag__close">&times;</span>
+      </span>
+    </p>
+  </script>
+  <script type="x-template" id="panel">
+    <div class="panel panel--default">
+      <div class="panel__heading">Panel heading without title</div>
+      <div class="panel__body">
+        Panel content
+      </div>
+    </div>
+  </script>
+  <script type="x-template" id="list">
+    <ul class="list-group">
+      <li class="list-group__item list-group--primary">Cras justo odio</li>
+      <li class="list-group__item">Dapibus ac facilisis in</li>
+      <li class="list-group__item">Morbi leo risus</li>
+      <li class="list-group__item">Porta ac consectetur ac</li>
+      <li class="list-group__item">Vestibulum at eros</li>
+    </ul>
+  </script>
+  <script type="x-template" id="media">
+    <div>
+      <div class="media">
+        <div class="media__left">
+          <a href="#">
+            <img class="media-object" src="http://cms-bucket.nosdn.127.net/2018/10/17/2fdb7fadb005496d9cf4b20f26003f8b.png" width="117">
+          </a>
+        </div>
+        <div class="media__body">
+          <h4 class="media-heading">巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元</h4> 巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元
+        </div>
+      </div>
+      <div class="media">
+        <div class="media__body">
+          <h4 class="media-heading">巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元</h4> 巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元
+        </div>
+        <div class="media__right">
+          <a href="#">
+            <img class="media-object" src="http://cms-bucket.nosdn.127.net/2018/10/17/2fdb7fadb005496d9cf4b20f26003f8b.png" width="117"></a>
+        </div>
+      </div>
+    </div>
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
