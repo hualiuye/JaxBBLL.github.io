@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/baby-ui/precache-manifest.cba0f541fc7e4504784846781a9e7850.js"
+  "/baby-ui/precache-manifest.cc45260fe0bdea395db9a68ff1133b76.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "vue-hello"});
