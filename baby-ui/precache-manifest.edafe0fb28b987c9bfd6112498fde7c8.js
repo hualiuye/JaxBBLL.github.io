@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/baby-ui/js/chunk-vendors.272e5479.js"
   },
   {
-    "revision": "ed099708820738ea57ad",
-    "url": "/baby-ui/js/app.dacdbb36.js"
+    "revision": "5afdb9d391980243d59d",
+    "url": "/baby-ui/js/app.e6f19d4e.js"
   },
   {
-    "revision": "cbc51805b27e52135f49751dba6da12f",
+    "revision": "a3fee384ea7d96ae3c46e4690ef1187a",
     "url": "/baby-ui/index.html"
   },
   {
-    "revision": "ed099708820738ea57ad",
+    "revision": "5afdb9d391980243d59d",
     "url": "/baby-ui/css/app.846b7f68.css"
   }
 ];
