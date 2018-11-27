@@ -53,6 +53,7 @@
     padding-bottom: 100px;
     z-index: 30;
     background-color: #fff;
+    scroll-behavior: smooth;
   }
   
   section + section {
@@ -60,10 +61,29 @@
     padding-top: 20px;
     border-top: 1px dashed #c9c9c9;
   }
+
+  .m-to-top {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #38f;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
   </style>
 </head>
 
 <body>
+  <a class="m-to-top" href="#button">&#8593;</a>
   <div class="nav">
     <div class="nav-wrap">
       <a href="#button">按钮</a>
