@@ -1,1 +1,297 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><!--[if IE]><link rel="icon" href="/baby-ui/favicon.ico"><![endif]--><title>vue-hello</title><link href=/baby-ui/css/app.846b7f68.css rel=preload as=style><link href=/baby-ui/js/app.e6f19d4e.js rel=preload as=script><link href=/baby-ui/js/chunk-vendors.272e5479.js rel=preload as=script><link href=/baby-ui/css/app.846b7f68.css rel=stylesheet><link rel=icon type=image/png sizes=32x32 href=/baby-ui/img/icons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/baby-ui/img/icons/favicon-16x16.png><link rel=manifest href=/baby-ui/manifest.json><meta name=theme-color content=#4DBA87><meta name=apple-mobile-web-app-capable content=no><meta name=apple-mobile-web-app-status-bar-style content=default><meta name=apple-mobile-web-app-title content=vue-hello><link rel=apple-touch-icon href=/baby-ui/img/icons/apple-touch-icon-152x152.png><link rel=mask-icon href=/baby-ui/img/icons/safari-pinned-tab.svg color=#4DBA87><meta name=msapplication-TileImage content=/baby-ui/img/icons/msapplication-icon-144x144.png><meta name=msapplication-TileColor content=#000000></head><body><noscript><strong>We're sorry but vue-hello doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=/baby-ui/js/chunk-vendors.272e5479.js></script><script src=/baby-ui/js/app.e6f19d4e.js></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>demo</title>
+  <link rel="stylesheet" href="index.css">
+  <style>
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1020;
+    width: 200px;
+    overflow: hidden;
+    box-shadow: 0 1px 8px rgba(0, 100, 0, .3);
+  }
+  
+  .nav-wrap {
+    position: relative;
+    width: 220px;
+    height: 100%;
+    z-index: 1;
+    overflow-y: scroll;
+  }
+  
+  .nav a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 12px 30px;
+  }
+  
+  .nav a + a {
+    border-top: 1px dashed #c9c9c9;
+  }
+  
+  .nav a:hover {
+    color: #38f;
+  }
+  
+  .main {
+    margin-left: 220px;
+    height: 100%;
+    overflow: auto;
+    padding-bottom: 100px;
+    z-index: 30;
+    background-color: #fff;
+  }
+  
+  section + section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px dashed #c9c9c9;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="nav-wrap">
+      <a href="#button">按钮</a>
+      <a href="#alert">alert</a>
+      <a href="#breadcrumb">breadcrumb</a>
+      <a href="#panel">面板</a>
+      <a href="#list">列表组</a>
+      <a href="#media">media</a>
+      <a href="#pagination">分页</a>
+      <a href="#input">input</a>
+      <a href="#radio">radio</a>
+      <a href="#checkbox">checkbox</a>
+      <a href="#dialog">dialog</a>
+    </div>
+  </div>
+  <div class="main">
+    <section id="button">
+      <h2>按钮</h2>
+      <h4>基本</h4>
+      <button class="button">按钮</button>
+      <button class="button button--primary">按钮</button>
+      <button class="button button--primary is-round">圆角按钮</button>
+      <h4>禁用按钮</h4>
+      <button class="button is-disabled">按钮</button>
+      <button class="button button--primary is-disabled">按钮</button>
+      <h4>文本按钮</h4>
+      <button class="button button--text">文本按钮</button>
+      <button class="button button--text is-disabled">禁用文本</button>
+      <button class="button button--text" disabled>禁用文本</button>
+      <h4>按钮组</h4>
+      <div class="button-group">
+        <button class="button button--primary">aa</button>
+        <button class="button">bb</button>
+        <button class="button">cc</button>
+        <button class="button">dd</button>
+        <button class="button">ee</button>
+      </div>
+    </section>
+    <section id="breadcrumb">
+      <h2>alert</h2>
+      <div class="alert">
+        <div class="alert--title">带辅助性文字介绍</div>
+        alert tip
+      </div>
+      <div class="alert alert--success">
+        <div class="alert--title">带辅助性文字介绍</div>
+        alert tip
+      </div>
+      <div class="alert alert--success">
+        <span class="alert__close">&times;</span> alert tip
+      </div>
+    </section>
+    <section id="alert">
+      <h2>breadcrumb</h2>
+      <ol class="breadcrumb">
+        <li class="breadcrumb__item"><a href="#">Home</a></li>
+        <li class="breadcrumb__item"><a href="#">Library</a></li>
+        <li class="breadcrumb__item active">Data</li>
+      </ol>
+    </section>
+    <section id="panel">
+      <h2>panel</h2>
+      <div class="panel panel--default">
+        <div class="panel__heading">Panel title</div>
+        <div class="panel__body">
+          Panel content
+        </div>
+      </div>
+    </section>
+    <section id="list">
+      <h2>list</h2>
+      <ul class="list-group">
+        <li class="list-group__item list-group--primary">Cras justo odio</li>
+        <li class="list-group__item">Dapibus ac facilisis in</li>
+        <li class="list-group__item">Morbi leo risus</li>
+        <li class="list-group__item">Porta ac consectetur ac</li>
+        <li class="list-group__item">Vestibulum at eros</li>
+      </ul>
+    </section>
+    <section id="media">
+      <h2>media</h2>
+      <div class="media">
+        <div class="media__left">
+          <a href="#">
+            <img class="media-object" src="http://cms-bucket.nosdn.127.net/2018/10/17/2fdb7fadb005496d9cf4b20f26003f8b.png" width="117">
+          </a>
+        </div>
+        <div class="media__body">
+          <h4 class="media-heading">巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元</h4> 巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元
+        </div>
+      </div>
+      <div class="media">
+        <div class="media__body">
+          <h4 class="media-heading">巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元</h4> 巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元
+        </div>
+        <div class="media__right">
+          <a href="#">
+            <img class="media-object" src="http://cms-bucket.nosdn.127.net/2018/10/17/2fdb7fadb005496d9cf4b20f26003f8b.png" width="117"></a>
+        </div>
+      </div>
+    </section>
+    <section id="pagination">
+      <h2>pagination</h2>
+      <ul class="pagination">
+        <li class="disabled"><a href="#"><span>&laquo;</span></a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#"><span>&raquo;</span></a></li>
+      </ul>
+    </section>
+    <section id="input">
+      <h2>input</h2>
+      <h4>行内input</h4>
+      <div class="input input--inline">
+        <input type="text" autocomplete="off" placeholder="请输入内容" class="input__inner">
+      </div>
+      <h4>行内禁用input</h4>
+      <div class="input input--inline">
+        <input type="text" autocomplete="off" disabled placeholder="请输入内容" class="input__inner">
+      </div>
+      <h4>块级input</h4>
+      <div class="input">
+        <input type="text" autocomplete="off" placeholder="请输入内容" class="input__inner">
+        <div class="input__error">
+          请输入邮箱地址
+        </div>
+      </div>
+      <h4>error input</h4>
+      <div class="input input--inline">
+        <input class="input__inner is-error" type="text" autocomplete="off" placeholder="请输入邮箱地址">
+        <div class="input__error">
+          请输入邮箱地址
+        </div>
+      </div>
+    </section>
+    <section id="radio">
+      <h2>radio</h2>
+      <h4>基础用法</h4>
+      <label class="radio">
+        <input type="radio" class="radio__original" value="1" name="state" checked>
+        <span class="radio__inner"></span>
+        <span class="radio__label">大</span>
+      </label>
+      <label class="radio">
+        <input type="radio" class="radio__original" value="2" name="state">
+        <span class="radio__inner"></span>
+        <span class="radio__label">中</span>
+      </label>
+      <label class="radio">
+        <input type="radio" class="radio__original" value="3" name="state">
+        <span class="radio__inner"></span>
+        <span class="radio__label">小</span>
+      </label>
+      <h4>禁用状态</h4>
+      <label class="radio">
+        <input type="radio" disabled class="radio__original" value="2" checked>
+        <span class="radio__inner"></span>
+        <span class="radio__label">小</span>
+      </label>
+      <label class="radio">
+        <input type="radio" disabled class="radio__original" value="3">
+        <span class="radio__inner"></span>
+        <span class="radio__label">小</span>
+      </label>
+    </section>
+    <section id="checkbox">
+      <h2>checkbox</h2>
+      <h4>基础用法</h4>
+      <label class="checkbox">
+        <input type="checkbox" checked class="checkbox__original" value="2">
+        <span class="checkbox__inner"></span>
+        <span class="checkbox__label">苹果</span>
+      </label>
+      <label class="checkbox">
+        <input type="checkbox" class="checkbox__original" value="1">
+        <span class="checkbox__inner"></span>
+        <span class="checkbox__label">香蕉</span>
+      </label>
+      <h4>禁用</h4>
+      <label class="checkbox">
+        <input type="checkbox" disabled checked class="checkbox__original" value="2">
+        <span class="checkbox__inner"></span>
+        <span class="checkbox__label">苹果</span>
+      </label>
+      <label class="checkbox">
+        <input type="checkbox" disabled class="checkbox__original" value="1">
+        <span class="checkbox__inner"></span>
+        <span class="checkbox__label">香蕉</span>
+      </label>
+    </section>
+    <section id="dialog">
+      <h2>dialog</h2>
+      <section>
+        <button type="button" class="button button--primary" onclick="dialogShow('dialog-target')">dialog</button>
+        <div class="dialog__wrapper" style="display: none;" id="dialog-target">
+          <div class="dialog">
+            <div class="dialog__content">
+              <div class="dialog__header">
+                <span class="dialog__title">title</span>
+                <button type="button" class="dialog__close" data-action="close">&times;</button>
+              </div>
+              <div class="dialog__body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam suscipit, totam molestiae natus, est excepturi dolor necessitatibus. Cupiditate incidunt voluptatum odio expedita aperiam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa officiis tempore consequuntur quod minima quaerat, ullam placeat explicabo provident ut expedita culpa rerum maxime reprehenderit unde deserunt, quae, blanditiis repellendus!
+              </div>
+              <div class="dialog__footer dialog__footer--right">
+                <button type="button" class="button button--primary">确认</button>
+                <button type="button" class="button" data-action="close">取消</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </div>
+  <script>
+  function dialogShow(target) {
+    var el = document.getElementById(target)
+    el.style.display = 'block'
+    var closeBtns = document.querySelectorAll('#'+ target + ' [data-action="close"]');
+    Array.from(closeBtns).forEach(function(item) {
+    	item.onclick = function(ev) {
+    		el.style.display = 'none';
+    	}
+    })
+  }
+  </script>
+</body>
+
+</html>
