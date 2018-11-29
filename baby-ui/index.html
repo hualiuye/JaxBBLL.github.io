@@ -20,7 +20,7 @@
     z-index: 1020;
     width: 200px;
     overflow: hidden;
-    box-shadow: 0 1px 8px rgba(0, 100, 0, .3);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
   }
   
   .nav-wrap {
@@ -48,6 +48,7 @@
   
   .main {
     margin-left: 220px;
+    padding: 15px;
     padding-bottom: 100px;
     background-color: #fff;
   }
@@ -57,7 +58,7 @@
     padding-top: 20px;
     border-top: 1px dashed #c9c9c9;
   }
-
+  
   .m-to-top {
     position: fixed;
     right: 2rem;
@@ -74,7 +75,6 @@
     font-size: 16px;
     cursor: pointer;
   }
-
   </style>
 </head>
 
@@ -89,7 +89,7 @@
       <a href="#list">列表组</a>
       <a href="#media">media</a>
       <a href="#pagination">分页</a>
-      <a href="#input">input</a>
+      <a href="#input">表单</a>
       <a href="#radio">radio</a>
       <a href="#checkbox">checkbox</a>
       <a href="#dialog">dialog</a>
@@ -193,7 +193,7 @@
       </ul>
     </section>
     <section id="input">
-      <h2>input</h2>
+      <h2>表单</h2>
       <h4>行内input</h4>
       <div class="input input--inline">
         <input type="text" autocomplete="off" placeholder="请输入内容" class="input__inner">
@@ -216,6 +216,146 @@
           请输入邮箱地址
         </div>
       </div>
+      <h4>文本域</h4>
+      <div class="textarea">
+        <textarea placeholder="请输入内容" class="textarea__inner"></textarea>
+      </div>
+      <h4>行内文本域</h4>
+      <div class="textarea textarea--inline">
+        <textarea placeholder="请输入内容" class="textarea__inner"></textarea>
+      </div>
+      <h4>文本域禁用</h4>
+      <div class="textarea textarea--inline">
+        <textarea disabled placeholder="请输入内容" class="textarea__inner"></textarea>
+      </div>
+      <h4>文本域error</h4>
+      <div class="textarea textarea--inline">
+        <textarea placeholder="请输入内容" class="textarea__inner is-error"></textarea>
+        <div class="textarea__error">
+          请输入内容
+        </div>
+      </div>
+      <h4>select</h4>
+      <div class="select select--inline">
+        <select class="select__inner">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <h4>select</h4>
+      <div class="select select--inline">
+        <select class="select__inner is-error">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+        <div class="select__error">请选择</div>
+      </div>
+      <h4>select multiple </h4>
+      <div class="select select--inline">
+        <select multiple class="select__inner">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <h4>输入框prepend</h4>
+      <div class="input input-group input-group--prepend">
+        <div class="input-group__prepend">http://</div>
+        <input type="text" placeholder="请输入内容" class="input__inner">
+      </div>
+      <h4>输入框append</h4>
+      <div class="input input-group input-group--append">
+        <input type="text" placeholder="请输入内容" class="input__inner">
+        <div class="input-group__append">.com</div>
+      </div>
+      <h4>输入框</h4>
+      <div class="input input-group input-group--append">
+        <input type="text" placeholder="请输入内容" class="input__inner">
+        <div class="input-group__append">
+          <button type="button" class="button button--primary">搜索</button>
+        </div>
+      </div>
+      <h4>表单</h4>
+      <form class="form">
+        <div class="form-group">
+          <div class="form-group__label is-require">姓名：</div>
+          <div class="form-group__content">
+            <div class="input">
+              <input type="text" autocomplete="off" placeholder="请输入内容" class="input__inner is-error">
+              <div class="input__error">请输入内容</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-group__label">性别：</div>
+          <div class="form-group__content">
+            <label class="radio">
+              <input type="radio" class="radio__original" value="1" name="state" checked>
+              <span class="radio__inner"></span>
+              <span class="radio__label">男</span>
+            </label>
+            <label class="radio">
+              <input type="radio" class="radio__original" value="2" name="state">
+              <span class="radio__inner"></span>
+              <span class="radio__label">女</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-group__label">等级：</div>
+          <div class="form-group__content">
+            <div class="select">
+              <select class="select__inner">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-group__label">爱好：</div>
+          <div class="form-group__content">
+            <label class="checkbox">
+              <input type="checkbox" checked class="checkbox__original" value="2">
+              <span class="checkbox__inner"></span>
+              <span class="checkbox__label">游泳</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__original" value="1">
+              <span class="checkbox__inner"></span>
+              <span class="checkbox__label">跑步</span>
+            </label>
+          </div>
+        </div>
+      </form>
+      <h4>行内表单</h4>
+      <form class="form form--inline">
+        <div class="form-group">
+          <div class="form-group__label">姓名：</div>
+          <div class="form-group__content">
+            <div class="input">
+              <input type="text" autocomplete="off" placeholder="请输入内容" class="input__inner">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-group__label">姓名：</div>
+          <div class="form-group__content">
+            <div class="input">
+              <input type="text" autocomplete="off" placeholder="请输入内容" class="input__inner">
+            </div>
+          </div>
+        </div>
+      </form>
     </section>
     <section id="radio">
       <h2>radio</h2>
@@ -300,11 +440,11 @@
   function dialogShow(target) {
     var el = document.getElementById(target)
     el.style.display = 'block'
-    var closeBtns = document.querySelectorAll('#'+ target + ' [data-action="close"]');
+    var closeBtns = document.querySelectorAll('#' + target + ' [data-action="close"]');
     Array.from(closeBtns).forEach(function(item) {
-    	item.onclick = function(ev) {
-    		el.style.display = 'none';
-    	}
+      item.onclick = function(ev) {
+        el.style.display = 'none';
+      }
     })
   }
   </script>
