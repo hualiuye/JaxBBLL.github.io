@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>example</title>
-  <link rel="stylesheet" href="index.css?v=0.1">
+  <link rel="stylesheet" href="index.css">
   <style>
   html,
   body {
@@ -109,6 +109,10 @@
       <button class="button button--text">文本按钮</button>
       <button class="button button--text is-disabled">禁用文本</button>
       <button class="button button--text" disabled>禁用文本</button>
+      <h4>loading按钮</h4>
+      <button class="button button--primary is-loading">
+        loading按钮
+      </button>
       <h4>按钮组</h4>
       <div class="button-group">
         <button class="button button--primary">aa</button>
@@ -334,6 +338,13 @@
               <span class="checkbox__inner"></span>
               <span class="checkbox__label">跑步</span>
             </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-group__label"></div>
+          <div class="form-group__content">
+            <button type="button" class="button button--primary">确认</button>
+            <button type="reset" class="button">重置</button>
           </div>
         </div>
       </form>

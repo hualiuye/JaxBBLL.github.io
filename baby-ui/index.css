@@ -629,8 +629,21 @@ template {
 /* button */
 /* radio */
 /* checkbox */
+@-webkit-keyframes rotating {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 .button {
   display: inline-block;
+  position: relative;
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
@@ -679,6 +692,16 @@ template {
   background-image: none;
   background-color: #fff;
   border-color: #e5e7ec;
+}
+.button.is-loading {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.button.is-loading:before {
+  content: '\2731';
+  display: inline-block;
+  -webkit-animation: rotating 2s linear infinite;
+          animation: rotating 2s linear infinite;
 }
 .button--primary {
   color: #fff;
