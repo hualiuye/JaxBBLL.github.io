@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <title>example</title>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="baby.css">
+  <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+  <script src="baby.js"></script>
   <style>
   html,
   body {
@@ -133,7 +135,10 @@
         alert tip
       </div>
       <div class="alert alert--success">
-        <span class="alert__close">&times;</span> alert tip
+        <span class="alert__close" data-dismiss="alert">&times;</span> alert tip
+      </div>
+      <div class="alert alert--success">
+        <span class="alert__close" data-dismiss="alert">&times;</span> alert tip
       </div>
     </section>
     <section id="breadcrumb">
