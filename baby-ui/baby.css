@@ -795,11 +795,11 @@ template {
 }
 .breadcrumb > .breadcrumb__item.active,
 .breadcrumb > .breadcrumb__item.active a {
-  color: #777;
+  color: #555555;
 }
 .breadcrumb > .breadcrumb__item + .breadcrumb__item:before {
   padding: 0 5px;
-  color: #c3c3c3;
+  color: #eeeeee;
   content: "/\00a0";
 }
 .alert {
@@ -965,7 +965,7 @@ template {
 .pagination > .disabled > span,
 .pagination > .disabled > span:focus,
 .pagination > .disabled > span:hover {
-  color: #777;
+  color: #555555;
   cursor: not-allowed;
   background-color: #fff;
   border-color: #ddd;
@@ -1198,7 +1198,7 @@ select[size] {
 .input-group__append,
 .input-group__prepend {
   background-color: #F2F6FC;
-  color: #777;
+  color: #555555;
   vertical-align: middle;
   display: table-cell;
   position: relative;
@@ -1420,36 +1420,43 @@ input[type=checkbox].checkbox__original:checked[disabled] + .checkbox__inner:aft
   vertical-align: middle;
 }
 .dialog__wrapper {
+  opacity: 0;
+  display: none;
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  background-color: rgba(25, 28, 34, 0.88);
   text-align: center;
-  white-space: nowrap;
   font-size: 0;
+  overflow: auto;
   z-index: 3000;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.dialog__wrapper.in {
+  display: block;
+  opacity: 1;
 }
 .dialog__wrapper:after {
-  content: "";
+  content: '';
   display: inline-block;
-  height: 100%;
+  width: 0;
+  height: 90%;
   vertical-align: middle;
 }
 .dialog__wrapper .dialog {
   display: inline-block;
-  vertical-align: middle;
-  border-radius: 6px;
-  background-color: #fff;
-  font-size: 14px;
   text-align: left;
-  white-space: normal;
-  min-width: 30%;
-  max-width: 60%;
-}
-.dialog__wrapper .dialog__content {
-  max-height: 100%;
+  border-radius: 4px;
+  background-color: #fff;
+  vertical-align: middle;
+  outline: 0;
+  position: relative;
+  font-size: 14px;
+  width: auto;
 }
 .dialog__wrapper .dialog__header {
   padding: 10px 15px;
@@ -1458,7 +1465,7 @@ input[type=checkbox].checkbox__original:checked[disabled] + .checkbox__inner:aft
 .dialog__wrapper .dialog__title {
   line-height: 24px;
   font-size: 18px;
-  color: #303133;
+  color: #333;
 }
 .dialog__wrapper .dialog__close {
   float: right;
@@ -1468,11 +1475,11 @@ input[type=checkbox].checkbox__original:checked[disabled] + .checkbox__inner:aft
   outline: none;
   cursor: pointer;
   font-size: 16px;
-  color: #777;
+  color: #555555;
 }
 .dialog__wrapper .dialog__body {
   padding: 15px;
-  max-height: 80vh;
+  min-height: 60px;
   overflow: auto;
 }
 .dialog__wrapper .dialog__footer {
@@ -1483,4 +1490,29 @@ input[type=checkbox].checkbox__original:checked[disabled] + .checkbox__inner:aft
 }
 .dialog__wrapper .dialog__footer.dialog__footer--right {
   text-align: right;
+}
+@media (max-width: 480px) {
+  .dialog {
+    max-width: 300px;
+  }
+}
+@media (min-width: 480px) {
+  .dialog {
+    max-width: 300px;
+  }
+}
+@media (min-width: 768px) {
+  .dialog {
+    max-width: 500px;
+  }
+}
+@media (min-width: 992px) {
+  .dialog {
+    max-width: 700px;
+  }
+}
+@media (min-width: 1200px) {
+  .dialog {
+    max-width: 900px;
+  }
 }

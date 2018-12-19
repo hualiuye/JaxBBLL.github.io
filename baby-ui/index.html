@@ -431,21 +431,58 @@
     <section id="dialog">
       <h2>dialog</h2>
       <section>
-        <button type="button" class="button button--primary" onclick="dialogShow('dialog-target')">dialog</button>
-        <div class="dialog__wrapper" style="display: none;" id="dialog-target">
+        <button type="button" class="button button--primary" id="dialog-btn1">dialog1</button>
+        <button type="button" class="button button--primary" id="dialog-btn2">dialog2</button>
+        <div class="dialog__wrapper" id="dialog-target1">
           <div class="dialog">
-            <div class="dialog__content">
-              <div class="dialog__header">
-                <span class="dialog__title">title</span>
-                <button type="button" class="dialog__close" data-action="close">&times;</button>
+            <div class="dialog__header">
+              <span class="dialog__title">常规dialog</span>
+              <button type="button" class="dialog__close" data-dismiss="dialog">&times;</button>
+            </div>
+            <div class="dialog__body">
+              <div>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</div>
+            </div>
+            <div class="dialog__footer dialog__footer--right">
+              <button type="button" class="button button--primary">确认</button>
+              <button type="button" class="button" data-dismiss="dialog">取消</button>
+            </div>
+          </div>
+        </div>
+
+          <div class="dialog__wrapper" id="dialog-target2">
+          <div class="dialog">
+            <div class="dialog__header">
+              <span class="dialog__title">内容很高的时候</span>
+              <button type="button" class="dialog__close" data-dismiss="dialog">&times;</button>
+            </div>
+            <div class="dialog__body">
+              <div style="height: 1000px;">
+                内容很高的时候内容很高的时候内容很高的时候内容很高的时候内容很高的时候内容很高的时候内容很高的时候<br>
+                内容很高的时候<br>
+                内容很高的时候<br>
+                内容很高的时候<br>
+                内容很高的时候<br>
+                内容很高的时候<br>
+                内容很高的时候<br>
+                内容很高的时候<br>
+                内容很高的时候<br>
+                内容很高的时候<br>
+                内容很高的时候<br>
+                内容很高的时候<br>
+                内容很高的时候<br>
+                内容很高的时候<br>
+                内容很高的时候<br>
+                内容很高的时候<br>
+                内容很高的时候<br>
+                内容很高的时候<br>
+                内容很高的时候<br>
+                内容很高的时候<br>
+                内容很高的时候<br>
               </div>
-              <div class="dialog__body">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam suscipit, totam molestiae natus, est excepturi dolor necessitatibus. Cupiditate incidunt voluptatum odio expedita aperiam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa officiis tempore consequuntur quod minima quaerat, ullam placeat explicabo provident ut expedita culpa rerum maxime reprehenderit unde deserunt, quae, blanditiis repellendus!
-              </div>
-              <div class="dialog__footer dialog__footer--right">
-                <button type="button" class="button button--primary">确认</button>
-                <button type="button" class="button" data-action="close">取消</button>
-              </div>
+            </div>
+            <div class="dialog__footer dialog__footer--right">
+              <button type="button" class="button button--primary">确认</button>
+              <button type="button" class="button" data-dismiss="dialog">取消</button>
             </div>
           </div>
         </div>
@@ -453,16 +490,15 @@
     </section>
   </div>
   <script>
-  function dialogShow(target) {
-    var el = document.getElementById(target)
-    el.style.display = 'block'
-    var closeBtns = document.querySelectorAll('#' + target + ' [data-action="close"]');
-    Array.from(closeBtns).forEach(function(item) {
-      item.onclick = function(ev) {
-        el.style.display = 'none';
-      }
-    })
-  }
+  var dialog1 = $.dialog('#dialog-target1');
+  var dialog2 = $.dialog('#dialog-target2');
+
+  $('#dialog-btn1').click(function(e) {
+    dialog1.open();
+  })
+  $('#dialog-btn2').click(function(e) {
+    dialog2.open();
+  })
   </script>
 </body>
 
