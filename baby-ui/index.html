@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>example</title>
+  <title>example a</title>
   <link rel="stylesheet" href="baby.css">
   <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
   <script src="baby.js"></script>
@@ -13,7 +13,7 @@
     height: 100%;
     scroll-behavior: smooth;
   }
-  
+
   .nav {
     position: fixed;
     top: 0;
@@ -77,6 +77,10 @@
     font-size: 16px;
     cursor: pointer;
   }
+  
+  .icons-list > * {
+    margin: 0.5rem;
+  }
   </style>
 </head>
 
@@ -85,6 +89,7 @@
   <div class="nav">
     <div class="nav-wrap">
       <a href="#button">按钮</a>
+      <a href="#icon">icon</a>
       <a href="#alert">alert</a>
       <a href="#breadcrumb">breadcrumb</a>
       <a href="#panel">面板</a>
@@ -139,6 +144,90 @@
       </div>
       <div class="alert alert--success">
         <span class="alert__close" data-dismiss="alert">&times;</span> alert tip
+      </div>
+    </section>
+    <section id="icon">
+      <h2>图标</h2>
+      <h4>默认</h4>
+      <div class="icons-list">
+        <span class="icon"><span class="icon-home"></span></span>
+        <span class="icon"><span class="icon-arrowRight"></span></span>
+        <span class="icon"><span class="icon-arrowLeft"></span></span>
+        <span class="icon"><span class="icon-arrowDown"></span></span>
+        <span class="icon"><span class="icon-arrowUp"></span></span>
+        <span class="icon"><span class="icon-comment"></span></span>
+        <span class="icon"><span class="icon-comment-text"></span></span>
+        <span class="icon"><span class="icon-mail"></span></span>
+        <span class="icon"><span class="icon-calendar"></span></span>
+        <span class="icon"><span class="icon-plus"></span></span>
+        <span class="icon"><span class="icon-minus"></span></span>
+        <span class="icon"><span class="icon-file"></span></span>
+        <span class="icon"><span class="icon-folder"></span></span>
+        <span class="icon"><span class="icon-tag"></span></span>
+        <span class="icon"><span class="icon-desktop"></span></span>
+        <span class="icon"><span class="icon-tablet"></span></span>
+        <span class="icon"><span class="icon-phone"></span></span>
+        <span class="icon"><span class="icon-menu"></span></span>
+        <span class="icon"><span class="icon-download"></span></span>
+        <span class="icon"><span class="icon-upload"></span></span>
+        <span class="icon"><span class="icon-tpl-full"></span></span>
+        <span class="icon"><span class="icon-tpl-side-r"></span></span>
+        <span class="icon"><span class="icon-tpl-side-l"></span></span>
+        <span class="icon"><span class="icon-list-view"></span></span>
+        <span class="icon"><span class="icon-grid-view"></span></span>
+        <span class="icon"><span class="icon-camera"></span></span>
+        <span class="icon"><span class="icon-image"></span></span>
+        <span class="icon"><span class="icon-play"></span></span>
+        <span class="icon"><span class="icon-stop"></span></span>
+        <span class="icon"><span class="icon-pause"></span></span>
+        <span class="icon"><span class="icon-forward"></span></span>
+        <span class="icon"><span class="icon-next"></span></span>
+        <span class="icon"><span class="icon-rewind"></span></span>
+        <span class="icon"><span class="icon-prev"></span></span>
+        <span class="icon"><span class="icon-stats"></span></span>
+        <span class="icon"><span class="icon-battery-empty"></span></span>
+        <span class="icon"><span class="icon-battery-1_4"></span></span>
+        <span class="icon"><span class="icon-battery-half"></span></span>
+        <span class="icon"><span class="icon-battery-3_4"></span></span>
+        <span class="icon"><span class="icon-battery-full"></span></span>
+        <span class="icon"><span class="icon-sound-mute"></span></span>
+        <span class="icon"><span class="icon-sound-normal"></span></span>
+        <span class="icon"><span class="icon-sound-loud"></span></span>
+      </div>
+      <h4>方块</h4>
+      <div class="icons-list">
+        <span class="icon icon-small icon-square"><span class="icon-home"></span></span>
+        <span class="icon icon-small icon-square"><span class="icon-arrowRight"></span></span>
+        <span class="icon icon-small icon-square"><span class="icon-arrowLeft"></span></span>
+        <span class="icon icon-small icon-square"><span class="icon-arrowDown"></span></span>
+      </div>
+      <h4>圆形</h4>
+      <div class="icons-list">
+        <span class="icon icon-small icon-rounded"><span class="icon-home"></span></span>
+        <span class="icon icon-small icon-rounded"><span class="icon-arrowRight"></span></span>
+        <span class="icon icon-small icon-rounded"><span class="icon-arrowLeft"></span></span>
+        <span class="icon icon-small icon-rounded"><span class="icon-arrowDown"></span></span>
+      </div>
+      <h4>尺寸：小/默认/中/大</h4>
+      <div>
+        <p>
+          <span class="icon icon-small"><span class="icon-home"></span></span>
+          <span class="icon"><span class="icon-home"></span></span>
+          <span class="icon icon-mid"><span class="icon-home"></span></span>
+          <span class="icon icon-large"><span class="icon-home"></span></span>
+        </p>
+        <p>
+          <span class="icon icon-square icon-small"><span class="icon-home"></span></span>
+          <span class="icon icon-square "><span class="icon-home"></span></span>
+          <span class="icon icon-square icon-mid"><span class="icon-home"></span></span>
+          <span class="icon icon-square icon-large"><span class="icon-home"></span></span>
+        </p>
+        <p>
+          <span class="icon icon-rounded icon-small"><span class="icon-home"></span></span>
+          <span class="icon icon-rounded"><span class="icon-home"></span></span>
+          <span class="icon icon-rounded icon-mid"><span class="icon-home"></span></span>
+          <span class="icon icon-rounded icon-large"><span class="icon-home"></span></span>
+        </p>
       </div>
     </section>
     <section id="breadcrumb">
@@ -448,8 +537,7 @@
             </div>
           </div>
         </div>
-
-          <div class="dialog__wrapper" id="dialog-target2">
+        <div class="dialog__wrapper" id="dialog-target2">
           <div class="dialog">
             <div class="dialog__header">
               <span class="dialog__title">内容很高的时候</span>
@@ -457,27 +545,28 @@
             </div>
             <div class="dialog__body">
               <div style="height: 1000px;">
-                内容很高的时候内容很高的时候内容很高的时候内容很高的时候内容很高的时候内容很高的时候内容很高的时候<br>
-                内容很高的时候<br>
-                内容很高的时候<br>
-                内容很高的时候<br>
-                内容很高的时候<br>
-                内容很高的时候<br>
-                内容很高的时候<br>
-                内容很高的时候<br>
-                内容很高的时候<br>
-                内容很高的时候<br>
-                内容很高的时候<br>
-                内容很高的时候<br>
-                内容很高的时候<br>
-                内容很高的时候<br>
-                内容很高的时候<br>
-                内容很高的时候<br>
-                内容很高的时候<br>
-                内容很高的时候<br>
-                内容很高的时候<br>
-                内容很高的时候<br>
-                内容很高的时候<br>
+                内容很高的时候内容很高的时候内容很高的时候内容很高的时候内容很高的时候内容很高的时候内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br>
               </div>
             </div>
             <div class="dialog__footer dialog__footer--right">
