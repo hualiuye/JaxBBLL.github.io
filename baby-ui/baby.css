@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -614,952 +615,903 @@ template {
 .l-col-offset-24 {
   margin-left: 100%;
 }
+.iconoo-stroke {
+  border: 2px solid;
+}
+.stickCenterV,
+.iconoo-textIndent:before,
+.iconoo-textOutdent:before,
+.iconoo-list:before,
+.iconoo-volumeLow:before,
+.iconoo-volumeMedium:before,
+.iconoo-volumeHigh:before,
+.iconoo-volumeHigh:after,
+.iconoo-volumeDecrease:before,
+.iconoo-volumeIncrease:before,
+.iconoo-volumeMute:before,
+.iconoo-volumeDecrease:after,
+.iconoo-volumeIncrease:after,
+.iconoo-volumeMute:after,
+.iconoo-rightArrow:before,
+.iconoo-leftArrow:before,
+.iconoo-upArrow:before,
+.iconoo-downArrow:before {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.stickCenterH,
+[class*="iconoo-textAlign"].iconoo-textAlignCenter:before,
+[class*="iconoo-textAlign"].iconoo-textAlignCenter:after,
+.iconoo-search:before {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.stickCenter,
+.iconoo-pin:before,
+[class*="iconoo-plus"]:before,
+[class*="iconoo-plus"]:after,
+[class*="iconoo-cross"]:before,
+[class*="iconoo-cross"]:after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.spin[class*="spin"] {
+  -webkit-animation: loading-spinner 2s infinite linear;
+  animation: loading-spinner 2s infinite linear;
+}
+@-webkit-keyframes loading-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/**
+ * emoji 表情符
+ * 需要调整尺寸的时候只需要设置font-size即可等比缩放
+ * 主控参数默认值 font-size: $U20;
+ * $strokeSize，笔触大小，这里用来指定边框线宽
+ */
+[class*="iconoo-textAlign"] {
+  width: 1.3em;
+  height: 1.1em;
+  margin: 0.2em 0.1em;
+}
+[class*="iconoo-textAlign"]:before,
+[class*="iconoo-textAlign"]:after {
+  position: absolute;
+  height: 2px;
+  -webkit-box-shadow: inset 0 0 0 1em, 0 0.4em 0 0, 0 0.8em 0 0;
+  box-shadow: inset 0 0 0 1em, 0 0.4em 0 0, 0 0.8em 0 0;
+  right: 0;
+}
+[class*="iconoo-textAlign"]:before {
+  width: 1.3em;
+  top: 0;
+}
+[class*="iconoo-textAlign"]:after {
+  width: 0.9em;
+  top: 0.2em;
+}
+[class*="iconoo-textAlign"].iconoo-textAlignLeft:before,
+[class*="iconoo-textAlign"].iconoo-textAlignLeft:after {
+  left: 0;
+}
+.iconoo-textIndent,
+.iconoo-textOutdent {
+  width: 1em;
+  height: 0.8em;
+  border-width: 0.2em 0 0.2em 0.4em;
+  border-style: solid;
+  border-color: transparent;
+  -webkit-box-shadow: 0 -2px, 0 2px, inset 0 2px, inset 0 -2px;
+  box-shadow: 0 -2px, 0 2px, inset 0 2px, inset 0 -2px;
+  margin: 0.35em 0.25em;
+}
+.iconoo-textIndent:before,
+.iconoo-textOutdent:before {
+  left: -0.4em;
+  border: 0.25em solid;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-width: 0;
+}
+.iconoo-textOutdent:before {
+  border-left-width: 0;
+  border-right-width: 0.25em;
+}
+/**
+ * Pin、
+ * 需要调整尺寸的时候只需要设置font-size即可等比缩放
+ * 主控参数默认值 font-size: $U20;
+ * $strokeSize，笔触大小，也就是图标的线宽
+ */
+.iconoo-locationArrow {
+  width: 1.5em;
+  height: 1.5em;
+}
+.iconoo-locationArrow:before {
+  position: absolute;
+  left: 0.35em;
+  top: 0.8em;
+  border-width: 0.3em 0 0.3em 0.3em;
+  border-style: solid;
+  border-left-color: transparent;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.iconoo-locationArrow:after {
+  position: absolute;
+  top: 0.5em;
+  left: 0.1em;
+  border-width: 0.5em;
+  border-style: solid;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: skew(-30deg, -30deg);
+  transform: skew(-30deg, -30deg);
+}
+.iconoo-pin {
+  width: 1.1em;
+  height: 1.1em;
+  border: 2px solid;
+  border-radius: 50% 50% 50% 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.iconoo-pin:before {
+  position: absolute;
+  width: 0.3em;
+  height: 0.3em;
+  border: 2px solid;
+  border-radius: 50%;
+}
+/**
+ * search
+ * 需要调整尺寸的时候只需要设置font-size即可等比缩放
+ * 主控参数默认值 font-size: $U20;
+ * $strokeSize，笔触大小，也就是图标的线宽
+ */
+.iconoo-home {
+  width: 1.1em;
+  height: 0.8em;
+  border: 2px solid;
+  border-top: none;
+  margin: 0.65em 0.2em 0.05em 0.2em;
+}
+.iconoo-home:before {
+  width: 1em;
+  height: 1em;
+  -webkit-transform: translate(-50%, -0.35em) rotate(45deg);
+  transform: translate(-50%, -0.35em) rotate(45deg);
+  position: absolute;
+  left: 50%;
+  margin: auto;
+  border: 2px solid;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.iconoo-home:after {
+  width: 0.3em;
+  height: 0.5em;
+  bottom: 0;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border: 1px solid;
+  border-bottom: none;
+}
+/**
+ * Reset、Sync
+ * 需要调整尺寸的时候只需要设置font-size即可等比缩放
+ * 主控参数默认值 font-size: $U20;
+ * $strokeSize，笔触大小，也就是图标的线宽
+ */
+.iconoo-reset {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  border-width: 2px;
+  border-style: solid;
+  border-left-color: transparent;
+}
+.iconoo-reset:before {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 0.3em;
+  border-style: solid;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  bottom: 0;
+  right: 50%;
+  -webkit-transform: translateX(-50%) rotate(135deg);
+  transform: translateX(-50%) rotate(135deg);
+}
+.iconoo-sync {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  border: 2px solid;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+.iconoo-sync:before,
+.iconoo-sync:after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 0.3em;
+  border-style: solid;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.iconoo-sync:before {
+  -webkit-transform: translateX(50%) rotate(-45deg);
+  transform: translateX(50%) rotate(-45deg);
+  left: 50%;
+  top: 0;
+}
+.iconoo-sync:after {
+  -webkit-transform: translateX(-50%) rotate(135deg);
+  transform: translateX(-50%) rotate(135deg);
+  right: 50%;
+  bottom: 0;
+}
+/**
+ * Share
+ * 需要调整尺寸的时候只需要设置font-size即可等比缩放
+ * 主控参数默认值 font-size: $U20;
+ * PS：这里没有线宽的概念，只有等比缩放。
+ */
+.iconoo-share {
+  height: 0.45em;
+  width: 0.45em;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 0 0 1em, 1.1em -0.5em 0 0, 1.1em 0.5em 0 0;
+  box-shadow: inset 0 0 0 1em, 1.1em -0.5em 0 0, 1.1em 0.5em 0 0;
+  margin: 0.55em 1.15em 0.55em -0.05em;
+}
+.iconoo-share:before,
+.iconoo-share:after {
+  position: absolute;
+  width: 1.2em;
+  height: 0.1em;
+  -webkit-box-shadow: inset 0 0 0 1em;
+  box-shadow: inset 0 0 0 1em;
+  left: 0;
+}
+.iconoo-share:before {
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  -webkit-transform: translate(0.35em, 0.1em) rotate(-25deg);
+  transform: translate(0.35em, 0.1em) rotate(-25deg);
+}
+.iconoo-share:after {
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  -webkit-transform: translate(0.25em, 0.2em) rotate(25deg);
+  transform: translate(0.25em, 0.2em) rotate(25deg);
+}
+/**
+ * search
+ * 需要调整尺寸的时候只需要设置font-size即可等比缩放
+ * 主控参数默认值 font-size: $U20;
+ * PS：这里没有线宽的概念，只有等比缩放。
+ */
+.iconoo-bars,
+.iconoo-hamburger {
+  width: 1em;
+  height: 0.1em;
+  -webkit-box-shadow: inset 0 0 0 1em, 0 -0.3em, 0 0.3em;
+  box-shadow: inset 0 0 0 1em, 0 -0.3em, 0 0.3em;
+  margin: 0.7em 0.25em;
+}
+.iconoo-ellipsis {
+  width: 0.2em;
+  height: 0.2em;
+  -webkit-box-shadow: 0 -0.4em 0, 0 0 0 1em inset, 0 0.4em 0;
+  box-shadow: 0 -0.4em 0, 0 0 0 1em inset, 0 0.4em 0;
+  margin: 0.65em;
+}
+.iconoo-tiles {
+  width: 0.2em;
+  height: 0.2em;
+  -webkit-box-shadow: 0 -0.4em 0, -0.4em -0.4em 0, 0.4em -0.4em 0, 0 0 0 1em inset, -0.4em 0 0, 0.4em 0 0, 0 0.4em 0, -0.4em 0.4em 0, 0.4em 0.4em 0;
+  box-shadow: 0 -0.4em 0, -0.4em -0.4em 0, 0.4em -0.4em 0, 0 0 0 1em inset, -0.4em 0 0, 0.4em 0 0, 0 0.4em 0, -0.4em 0.4em 0, 0.4em 0.4em 0;
+  margin: 0.65em;
+}
+.iconoo-list {
+  width: 0.2em;
+  height: 0.2em;
+  -webkit-box-shadow: inset 0 0 0 1em, 0 -0.4em 0 0, 0 0.4em 0 0;
+  box-shadow: inset 0 0 0 1em, 0 -0.4em 0 0, 0 0.4em 0 0;
+  margin: 0.65em 1.2em 0.65em 0.1em;
+}
+.iconoo-list:before {
+  width: 0.9em;
+  height: 0.2em;
+  left: 0.4em;
+  -webkit-box-shadow: inset 0 0 0 1em, 0 -0.4em 0 0, 0 0.4em 0 0;
+  box-shadow: inset 0 0 0 1em, 0 -0.4em 0 0, 0 0.4em 0 0;
+}
+/**
+ * search
+ * 需要调整尺寸的时候只需要设置font-size即可等比缩放
+ * 主控参数默认值 font-size: $U20;
+ * PS：这里没有线宽的概念，只有等比缩放。
+ */
+.iconoo-search {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 0.1em solid;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin: 0.15em 0.15em 0.35em 0.35em;
+}
+.iconoo-search:before {
+  width: 0.2em;
+  height: 0.65em;
+  -webkit-box-shadow: inset 0 0 0 1em;
+  box-shadow: inset 0 0 0 1em;
+  top: 0.85em;
+  border-radius: 0 0 0.05em 0.05em;
+}
+/**
+ * Volume
+ * 需要调整尺寸的时候只需要设置font-size即可等比缩放
+ * 主控参数默认值 font-size: $U20;
+ * PS：这里没有线宽的概念，只有等比缩放。
+ */
+.iconoo-volume,
+.iconoo-volumeLow,
+.iconoo-volumeMedium,
+.iconoo-volumeHigh,
+.iconoo-volumeDecrease,
+.iconoo-volumeIncrease,
+.iconoo-volumeMute {
+  width: 0;
+  height: 0;
+  border: 0.35em solid;
+  border-left: none;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  padding: 0.3em 0.2em;
+  -webkit-box-shadow: inset 0.2em 0;
+  box-shadow: inset 0.2em 0;
+  margin: 0.1em 0.375em;
+}
+.iconoo-volumeLow,
+.iconoo-volumeMedium,
+.iconoo-volumeHigh {
+  margin: 0.1em 0.5em 0.1em 0.25em;
+}
+.iconoo-volumeLow:before,
+.iconoo-volumeMedium:before,
+.iconoo-volumeHigh:before,
+.iconoo-volumeHigh:after {
+  width: 0.75em;
+  height: 0.75em;
+  position: absolute;
+  border: 0.1em solid;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  left: 0.1em;
+}
+.iconoo-volumeMedium,
+.iconoo-volumeHigh {
+  margin: 0.1em 0.6em 0.1em 0.15em;
+}
+.iconoo-volumeMedium:before,
+.iconoo-volumeHigh:before {
+  border-style: double;
+  border-width: 0.3em;
+  left: -0.1em;
+}
+.iconoo-volumeHigh {
+  margin: 0.1em 0.7em 0.1em 0.05em;
+}
+.iconoo-volumeHigh:after {
+  width: 1.6em;
+  height: 1.6em;
+  left: -0.35em;
+}
+.iconoo-volumeDecrease,
+.iconoo-volumeIncrease,
+.iconoo-volumeMute {
+  margin: 0.1em 0.7em 0.1em 0.05em;
+}
+.iconoo-volumeDecrease:before,
+.iconoo-volumeIncrease:before,
+.iconoo-volumeMute:before,
+.iconoo-volumeDecrease:after,
+.iconoo-volumeIncrease:after,
+.iconoo-volumeMute:after {
+  -webkit-box-shadow: inset 0 0 0 1em;
+  box-shadow: inset 0 0 0 1em;
+}
+.iconoo-volumeDecrease:before,
+.iconoo-volumeIncrease:before,
+.iconoo-volumeMute:before {
+  width: 0.5em;
+  height: 0.1em;
+  left: 0.85em;
+}
+.iconoo-volumeIncrease:after,
+.iconoo-volumeMute:after {
+  height: 0.5em;
+  width: 0.1em;
+  left: 1.05em;
+}
+.iconoo-volumeMute:after,
+.iconoo-volumeMute:before {
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+}
+/**
+ * Cross & Plus
+ * Cross is 45degree rotated plus
+ * 需要调整尺寸的时候只需要设置font-size即可等比缩放
+ * 主控参数默认值 font-size: $U20;
+ * $strokeSize，笔触大小，也就是图标的线宽
+ */
+[class*="iconoo-plus"],
+[class*="iconoo-cross"] {
+  width: 1.5em;
+  height: 1.5em;
+}
+[class*="iconoo-plus"]:before,
+[class*="iconoo-plus"]:after,
+[class*="iconoo-cross"]:before,
+[class*="iconoo-cross"]:after {
+  -webkit-box-shadow: inset 0 0 0 1em;
+  box-shadow: inset 0 0 0 1em;
+}
+[class*="iconoo-plus"]:before,
+[class*="iconoo-cross"]:before {
+  width: 1em;
+  height: 2px;
+}
+[class*="iconoo-plus"]:after,
+[class*="iconoo-cross"]:after {
+  height: 1em;
+  width: 2px;
+}
+[class*="iconoo-plus"][class*="Circle"]:before,
+[class*="iconoo-cross"][class*="Circle"]:before {
+  width: 0.9em;
+}
+[class*="iconoo-plus"][class*="Circle"]:after,
+[class*="iconoo-cross"][class*="Circle"]:after {
+  height: 0.9em;
+}
+.iconoo-cross,
+.iconoo-crossCircle {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/**
+ * Check
+ * 需要调整尺寸的时候只需要设置font-size即可等比缩放
+ * 主控参数默认值 font-size: $U20;
+ * $strokeSize，笔触大小，也就是图标的线宽
+ */
+[class*="iconoo-check"] {
+  width: 1.5em;
+  height: 1.5em;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+[class*="iconoo-check"]:before,
+[class*="iconoo-check"]:after {
+  -webkit-box-shadow: inset 0 0 0 1em;
+  box-shadow: inset 0 0 0 1em;
+}
+[class*="iconoo-check"]:before {
+  width: 1em;
+  height: 2px;
+  position: absolute;
+  left: 0.9em;
+  top: 0.9em;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+[class*="iconoo-check"]:after {
+  height: 0.6em;
+  width: 2px;
+  position: absolute;
+  left: 0.4em;
+  bottom: 0.6em;
+}
+[class*="iconoo-check"][class*="Circle"]:before {
+  width: 0.78em;
+  top: 0.9em;
+  left: 0.85em;
+}
+[class*="iconoo-check"][class*="Circle"]:after {
+  height: 0.4em;
+  left: 0.46em;
+  bottom: 0.6em;
+}
+/**
+ * 音频视频控制按钮：Play, Pause,Stop,Next,...
+ * 需要调整尺寸的时候只需要设置font-size即可等比缩放
+ * 主控参数默认值 font-size: $U20;
+ * PS：这里没有线宽的概念，只有等比缩放。
+ */
+.iconoo-play {
+  width: 0;
+  height: 0;
+  margin: 0.25em 0.35em;
+  border-width: 0.5em 0 0.5em 0.8em;
+  border-style: solid;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.iconoo-pause {
+  width: 0.3em;
+  height: 1em;
+  margin: 0.25em 0.9em 0.25em 0.3em;
+  -webkit-box-shadow: inset 0 0 0 1em, 0.6em 0 0 0;
+  box-shadow: inset 0 0 0 1em, 0.6em 0 0 0;
+}
+.iconoo-stop {
+  width: 0;
+  height: 0;
+  border: solid 0.5em;
+  margin: 0.25em;
+}
+.iconoo-forward,
+.iconoo-rewind {
+  width: 0;
+  height: 0;
+  margin: 0.25em;
+  border: 0.5em solid transparent;
+  border-left: 0.5em solid;
+}
+.iconoo-forward:before,
+.iconoo-rewind:before {
+  position: absolute;
+  left: 0;
+  top: -0.5em;
+  width: 0;
+  height: 0;
+  border: 0.5em solid transparent;
+  border-left: 0.5em solid;
+}
+.iconoo-rewind {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.iconoo-next,
+.iconoo-previous {
+  width: 0;
+  height: 0;
+  margin: 0.25em 0.15em 0.25em 0.35em;
+  border: 0.5em solid transparent;
+  border-left: 0.5em solid;
+}
+.iconoo-next:before,
+.iconoo-previous:before {
+  position: absolute;
+  left: 0;
+  top: -0.5em;
+  width: 0;
+  height: 0;
+  border-width: 0.5em 0.15em;
+  border-style: solid;
+}
+.iconoo-previous {
+  -webkit-transform: translateX(-0.25em) rotate(180deg);
+  transform: translateX(-0.25em) rotate(180deg);
+}
+/**
+ * emoji 表情符
+ * 需要调整尺寸的时候只需要设置font-size即可等比缩放
+ * 主控参数默认值 font-size: $U20;
+ * $strokeSize，笔触大小，这里用来指定边框线宽
+ */
+.iconoo-smile,
+.iconoo-frown,
+.iconoo-meh {
+  border-radius: 50%;
+  border: 2px solid;
+  height: 1.5em;
+  width: 1.5em;
+}
+.iconoo-smile:before,
+.iconoo-frown:before,
+.iconoo-meh:before {
+  border-radius: 50%;
+  -webkit-box-shadow: 0.5em 0 0 0, 0 0 0 1em inset;
+  box-shadow: 0.5em 0 0 0, 0 0 0 1em inset;
+  height: 0.2em;
+  width: 0.2em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  -webkit-transform: translate(-0.25em, 0.35em);
+  transform: translate(-0.25em, 0.35em);
+}
+.iconoo-smile:after,
+.iconoo-frown:after,
+.iconoo-meh:after {
+  border-radius: 50%;
+  border: 2px solid;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  height: 0.8em;
+  width: 0.8em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.iconoo-frown:after {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transform-origin: center 85%;
+  transform-origin: center 85%;
+}
+.iconoo-meh:after {
+  top: -0.2em;
+  width: 0.6em;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-radius: 0;
+}
+/**
+ * Carets
+ * 需要调整尺寸的时候只需要设置font-size即可等比缩放
+ * 主控参数默认值 font-size: $U20;
+ * $strokeSize，笔触大小，也就是图标的线宽
+ */
+.iconoo-caretRight,
+.iconoo-caretRightCircle,
+.iconoo-caretRightSquare,
+.iconoo-caretLeft,
+.iconoo-caretLeftCircle,
+.iconoo-caretLeftSquare,
+.iconoo-caretUp,
+.iconoo-caretUpCircle,
+.iconoo-caretUpSquare,
+.iconoo-caretDown,
+.iconoo-caretDownCircle,
+.iconoo-caretDownSquare {
+  width: 0.5em;
+  height: 1em;
+  margin: 0.25em 0.5em;
+}
+.iconoo-caretRight:before,
+.iconoo-caretRightCircle:before,
+.iconoo-caretRightSquare:before,
+.iconoo-caretLeft:before,
+.iconoo-caretLeftCircle:before,
+.iconoo-caretLeftSquare:before,
+.iconoo-caretUp:before,
+.iconoo-caretUpCircle:before,
+.iconoo-caretUpSquare:before,
+.iconoo-caretDown:before,
+.iconoo-caretDownCircle:before,
+.iconoo-caretDownSquare:before,
+.iconoo-caretRight:after,
+.iconoo-caretRightCircle:after,
+.iconoo-caretRightSquare:after,
+.iconoo-caretLeft:after,
+.iconoo-caretLeftCircle:after,
+.iconoo-caretLeftSquare:after,
+.iconoo-caretUp:after,
+.iconoo-caretUpCircle:after,
+.iconoo-caretUpSquare:after,
+.iconoo-caretDown:after,
+.iconoo-caretDownCircle:after,
+.iconoo-caretDownSquare:after {
+  width: 0.707em;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  right: 0;
+  -webkit-box-shadow: inset 0 0 0 1em;
+  box-shadow: inset 0 0 0 1em;
+  -webkit-transform-origin: right;
+  transform-origin: right;
+}
+.iconoo-caretRight:before,
+.iconoo-caretRightCircle:before,
+.iconoo-caretRightSquare:before,
+.iconoo-caretLeft:before,
+.iconoo-caretLeftCircle:before,
+.iconoo-caretLeftSquare:before,
+.iconoo-caretUp:before,
+.iconoo-caretUpCircle:before,
+.iconoo-caretUpSquare:before,
+.iconoo-caretDown:before,
+.iconoo-caretDownCircle:before,
+.iconoo-caretDownSquare:before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.iconoo-caretRight:after,
+.iconoo-caretRightCircle:after,
+.iconoo-caretRightSquare:after,
+.iconoo-caretLeft:after,
+.iconoo-caretLeftCircle:after,
+.iconoo-caretLeftSquare:after,
+.iconoo-caretUp:after,
+.iconoo-caretUpCircle:after,
+.iconoo-caretUpSquare:after,
+.iconoo-caretDown:after,
+.iconoo-caretDownCircle:after,
+.iconoo-caretDownSquare:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.iconoo-caretLeft,
+.iconoo-caretLeftCircle,
+.iconoo-caretLeftSquare {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.iconoo-caretUp,
+.iconoo-caretUpCircle,
+.iconoo-caretUpSquare {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.iconoo-caretDown,
+.iconoo-caretDownCircle,
+.iconoo-caretDownSquare {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+[class*="iconoo-caret"][class*="Circle"]:before,
+[class*="iconoo-caret"][class*="Circle"]:after,
+[class*="iconoo-caret"][class*="Square"]:before,
+[class*="iconoo-caret"][class*="Square"]:after {
+  width: 0.55em;
+  right: 0.5em;
+}
+/**
+ * Arrow
+ * 需要调整尺寸的时候只需要设置font-size即可等比缩放
+ * 主控参数默认值 font-size: $U20;
+ * PS：这里没有线宽的概念，只有等比缩放。
+ */
+.plus {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+}
+.plus:before,
+plus:after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-box-shadow: inset 0 0 0 1em;
+  box-shadow: inset 0 0 0 1em;
+}
+.plus:before {
+  width: 1em;
+  height: 2px;
+}
+.plus:after {
+  height: 1em;
+  width: 2px;
+}
+.iconoo-rightArrow,
+.iconoo-leftArrow,
+.iconoo-upArrow,
+.iconoo-downArrow {
+  width: 0.8em;
+  height: 0.2em;
+  -webkit-box-shadow: inset 0 0 0 1em;
+  box-shadow: inset 0 0 0 1em;
+  margin: 0.65em 0.55em 0.65em 0.15em;
+}
+.iconoo-rightArrow:before,
+.iconoo-leftArrow:before,
+.iconoo-upArrow:before,
+.iconoo-downArrow:before {
+  border-style: solid;
+  border-width: 0.4em 0 0.4em 0.4em;
+  border-color: transparent;
+  border-left-color: inherit;
+  left: 100%;
+  right: auto;
+}
+.iconoo-leftArrow {
+  -webkit-transform: translateX(0.4em) rotate(180deg);
+  transform: translateX(0.4em) rotate(180deg);
+}
+.iconoo-upArrow {
+  -webkit-transform: translate(0.2em, 0.2em) rotate(-90deg);
+  transform: translate(0.2em, 0.2em) rotate(-90deg);
+}
+.iconoo-downArrow {
+  -webkit-transform: translate(0.2em, -0.2em) rotate(90deg);
+  transform: translate(0.2em, -0.2em) rotate(90deg);
+}
+[class*="iconoo-"] {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  color: #666;
+  font-size: 20px;
+  font-style: normal;
+  text-align: left;
+  text-indent: -9999px;
+  direction: ltr;
+}
+[class*="iconoo-"]:before,
+[class*="iconoo-"]:after {
+  content: '';
+  pointer-events: none;
+}
+[class*="iconoo-"][class*="Circle"] {
+  -webkit-box-shadow: 0 0 0 2px;
+  box-shadow: 0 0 0 2px;
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0;
+}
+[class*="iconoo-"][class*="Square"] {
+  -webkit-box-shadow: 0 0 0 2px;
+  box-shadow: 0 0 0 2px;
+  border-radius: 4px;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0;
+}
+[class*="iconoo-"],
+[class*="iconoo-"] * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 /* color variables */
 /* button */
 /* radio */
 /* checkbox */
-.icon {
-  /* don't change width and height in order to change the size of the icon,
-	you can control the size with font-size for different class(es) - below */
-  line-height: 100%;
-  width: 1em;
-  height: 1em;
-  position: relative;
-  display: inline-block;
-  font-size: 1em;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-}
-/* Button like icons */
-.icon-square,
-.icon-rounded {
-  border: 0.5em solid #f2f2f2;
-  /* #f2f2f2 */
-  background-color: #f2f2f2;
-  /* #f2f2f2 */
-  margin: 0 .5em 0 0;
-  /* for browsers that supports */
-  -webkit-box-shadow: 0 0 0 0.0625em #e2e2e2;
-  /* #e2e2e2 */
-  /* #e2e2e2 */
-  box-shadow: 0 0 0 0.0625em #e2e2e2;
-  /* #e2e2e2 */
-}
-.icon-rounded {
-  border-radius: 1.5em;
-}
-/*
- * Sizes
- *
- */
-.icon-small {
-  font-size: 0.6em;
-}
-.icon-mid {
-  font-size: 1.8em;
-}
-.icon-large {
-  font-size: 3em;
-}
-/*
- * Icons
- *
- * Icons are somewhat grouped so that you can easily pick the ones you like
- * if the whole file is too large for your project.
- *
- */
-/* Home */
-.icon-home {
-  position: absolute;
-  top: 0;
-  left: .125em;
-  width: .25em;
-  height: .5em;
-  background-color: #666;
-  /* #666 */
-}
-.icon-home:before,
-.icon-home:after {
-  content: "";
-  position: absolute;
-  border-style: solid;
-}
-.icon-home:before {
-  top: .5em;
-  left: 0;
-  width: .25em;
-  height: .3125em;
-  border-width: .1875em .25em 0 .25em;
-  border-color: #666;
-  /* #666 */
-}
-.icon-home:after {
-  top: -0.5em;
-  left: -0.125em;
-  width: 0;
-  height: 0;
-  border-width: .5em;
-  border-color: transparent transparent #666 transparent;
-  /* #666 */
-}
-/* Arrows */
-.icon-arrowRight,
-.icon-arrowLeft,
-.icon-arrowDown,
-.icon-arrowUp {
-  position: absolute;
-  width: .5em;
-  height: .5em;
-  background-color: #666;
-  /* #666 */
-}
-.icon-arrowRight:after,
-.icon-arrowLeft:after,
-.icon-arrowDown:after,
-.icon-arrowUp:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-width: .5em;
-  border-style: solid;
-}
-/* Arrows - Left and Right */
-.icon-arrowRight,
-.icon-arrowLeft {
-  top: .25em;
-}
-.icon-arrowRight {
-  left: 0;
-}
-.icon-arrowLeft {
-  right: 0;
-}
-.icon-arrowRight:after,
-.icon-arrowLeft:after {
-  top: -0.25em;
-}
-.icon-arrowRight:after {
-  left: .5em;
-  border-color: transparent transparent transparent #666;
-  /* #666 */
-}
-.icon-arrowLeft:after {
-  right: .5em;
-  border-color: transparent #666 transparent transparent;
-  /* #666 */
-}
-/* Arrows -  Down and Up */
-.icon-arrowDown,
-.icon-arrowUp {
-  left: .25em;
-}
-.icon-arrowDown {
-  top: 0;
-}
-.icon-arrowUp,
-.icon-arrowDown:after {
-  top: .5em;
-}
-.icon-arrowDown:after,
-.icon-arrowUp:after {
-  left: -0.25em;
-}
-.icon-arrowDown:after {
-  border-color: #666 transparent transparent transparent;
-  /* #666 */
-}
-.icon-arrowUp:after {
-  top: -1em;
-  border-color: transparent transparent #666 transparent;
-  /* #666 */
-}
-/* Comments */
-.icon-comment,
-.icon-comment-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1em;
-  height: .75em;
-  background-color: #666;
-  /* #666 */
-  /* for browsers that supports */
-  border-radius: .125em;
-}
-.icon-comment:after,
-.icon-comment-text:before,
-.icon-comment-text:after {
-  content: "";
-  position: absolute;
-  border-style: solid;
-}
-.icon-comment-text:before {
-  top: .1875em;
-  left: .125em;
-  width: .75em;
-  height: .125em;
-  border-width: .09375em 0;
-  border-color: #f9f9f9;
-  /* #f9f9f9 */
-}
-.icon-comment:after,
-.icon-comment-text:after {
-  top: .75em;
-  left: .25em;
-  width: 0;
-  height: 0;
-  border-width: .125em;
-  border-color: #666 transparent transparent #666;
-  /* #666 */
-}
-/* Mail */
-.icon-mail {
-  position: absolute;
-  top: .15625em;
-  left: 0;
-  width: 1em;
-  height: .75em;
-  background-color: #666;
-  /*#666*/
-}
-.icon-mail:before,
-.icon-mail:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-width: .4em .5em;
-  border-style: solid;
-}
-.icon-mail:before {
-  top: 0;
-  border-color: #f9f9f9 transparent transparent transparent;
-  /* #f9f9f9 */
-}
-.icon-mail:after {
-  top: -0.0625em;
-  border-color: #666 transparent transparent transparent;
-  /* #666 */
-}
-/* Calendar */
-.icon-calendar {
-  position: absolute;
-  top: .125em;
-  left: 0;
-  width: .875em;
-  height: .6875em;
-  border-width: .125em .0625em .0625em .0625em;
-  border-style: solid;
-  border-color: #666;
-  /* #666 */
-  background-color: #f9f9f9;
-  /* #f9f9f9 */
-  /* for browsers that supports */
-  border-radius: .0625em;
-}
-.icon-calendar:before {
-  content: "";
-  position: absolute;
-  top: -0.25em;
-  left: .125em;
-  width: .375em;
-  height: .125em;
-  border-width: 0 .125em;
-  border-style: solid;
-  border-color: #666;
-  /* #666 */
-}
-.icon-calendar:after {
-  content: "15";
-  position: absolute;
-  top: -0.25em;
-  left: .25em;
-  font-family: Arial, sans-serif;
-  font-size: .5em;
-  font-weight: bold;
-  color: #666;
-  /* #666 */
-}
-/* Plus */
-.icon-plus,
-.icon-plus:after {
-  position: absolute;
-  width: .375em;
-  height: .375em;
-  border-style: solid;
-  border-color: #666;
-  /* #666 */
-}
-.icon-plus {
-  top: 0;
-  left: 0;
-  border-width: 0 .25em .25em 0;
-}
-.icon-plus:after {
-  content: "";
-  top: .375em;
-  left: .375em;
-  border-width: .25em 0 0 .25em;
-}
-/* Minus */
-.icon-minus {
-  position: absolute;
-  top: .375em;
-  left: 0;
-  width: 1em;
-  height: .25em;
-  background-color: #666;
-  /* #666 */
-}
-/* File */
-.icon-file {
-  position: absolute;
-  top: 0;
-  left: .125em;
-  width: .5em;
-  height: .75em;
-  border-width: .125em;
-  border-style: solid;
-  border-color: #666;
-  /* #666 */
-  background-color: #f9f9f9;
-  /* #f9f9f9 */
-  /* for browsers that supports */
-  border-radius: .0625em;
-}
-.icon-file:before {
-  content: "";
-  position: absolute;
-  top: -0.125em;
-  left: -0.125em;
-  width: 0;
-  height: 0;
-  border-width: .15625em;
-  border-style: solid;
-  border-color: #ffffff #666 #666 #ffffff;
-  /* #fff and #666 - #fff has to mach body bg*/
-}
-.icon-square .icon-file:before,
-.icon-rounded .icon-file:before {
-  border-color: #f2f2f2 #666 #666 #f2f2f2;
-  /* #f2f2f2 and #666 - #f2f2f2 has to mach with .icon-square and .icon-rounded bg*/
-}
-/* Folder */
-.icon-folder {
-  position: absolute;
-  top: .125em;
-  left: 0;
-  width: 1em;
-  height: .875em;
-  background-color: #666;
-  /* #666 */
-  /* for browsers that supports */
-  border-bottom-left-radius: .0625em;
-  border-bottom-right-radius: .0625em;
-}
-.icon-folder:before {
-  content: "";
-  position: absolute;
-  top: -0.125em;
-  left: .125em;
-  width: .375em;
-  height: .125em;
-  background-color: #666;
-  /* #666 */
-  /* for browsers that supports */
-  border-top-left-radius: .0625em;
-  border-top-right-radius: .0625em;
-}
-/* Tag */
-.icon-tag {
-  position: absolute;
-  top: 0;
-  left: .25em;
-  width: .5em;
-  height: .75em;
-  background-color: #666;
-  /* #666 */
-  /* for browsers that supports */
-  border-top-left-radius: .0625em;
-  border-top-right-radius: .0625em;
-}
-.icon-tag:before,
-.icon-tag:after {
-  content: "";
-  position: absolute;
-  top: .75em;
-  width: 0;
-  height: 0;
-  border-width: .125em;
-  border-style: solid;
-}
-.icon-tag:before {
-  left: 0;
-  border-color: #666 transparent transparent #666;
-  /* #666 */
-}
-.icon-tag:after {
-  left: .25em;
-  border-color: #666 #666 transparent transparent;
-  /* #666 */
-}
-/* Desktop */
-.icon-desktop {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: .875em;
-  height: .625em;
-  border-width: .0625em;
-  border-style: solid;
-  border-color: #666;
-  /* #666 */
-  background-color: #f9f9f9;
-  /* #f9f9f9 */
-  /* for browsers that supports */
-  border-radius: .0625em;
-}
-.icon-desktop:before,
-.icon-desktop:after {
-  content: "";
-  position: absolute;
-  background-color: #666;
-  /* #666 */
-}
-.icon-desktop:before {
-  top: .6875em;
-  left: .3125em;
-  width: .25em;
-  height: .1875em;
-}
-.icon-desktop:after {
-  top: .875em;
-  left: .125em;
-  width: .625em;
-  height: .0625em;
-}
-/* Tablet */
-.icon-tablet {
-  position: absolute;
-  top: .0625em;
-  left: 0;
-  width: .75em;
-  height: .625em;
-  border-width: .125em;
-  border-style: solid;
-  border-color: #666;
-  /* #666 */
-  background-color: #f9f9f9;
-  /* #f9f9f9 */
-  /* for browsers that supports */
-  border-radius: .0625em;
-}
-.icon-tablet:before {
-  content: "";
-  position: absolute;
-  top: .28125em;
-  left: -0.09375em;
-  width: .0625em;
-  height: .0625em;
-  background-color: #ffffff;
-  /* #fff */
-  /* for browsers that supports */
-  border-radius: .0625em;
-}
-/* Phone */
-.icon-phone {
-  position: absolute;
-  top: 0;
-  left: .1875em;
-  width: .5em;
-  height: .75em;
-  border-width: .125em .0625em;
-  border-style: solid;
-  border-color: #666;
-  /* #666 */
-  background-color: #f9f9f9;
-  /* #f9f9f9 */
-  /* for browsers that supports */
-  border-radius: .0625em;
-}
-.icon-phone:after {
-  content: "";
-  position: absolute;
-  top: .78125em;
-  left: .21875em;
-  width: .0625em;
-  height: .0625em;
-  background-color: #ffffff;
-  /* #fff */
-  /* for browsers that supports */
-  border-radius: .0625em;
-}
-/* Menu */
-.icon-menu,
-.icon-menu:before,
-.icon-menu:after {
-  position: absolute;
-  left: 0;
-  width: 1em;
-  height: .25em;
-  background-color: #666;
-  /* #666 */
-}
-.icon-menu {
-  top: .0625em;
-}
-.icon-menu:before {
-  content: "";
-  top: .3125em;
-}
-.icon-menu:after {
-  content: "";
-  top: .625em;
-}
-/* Download  and Upload */
-.icon-download,
-.icon-upload {
-  position: absolute;
-  left: .375em;
-  width: .25em;
-  height: .5em;
-  background-color: #666;
-  /* #666 */
-}
-.icon-download {
-  top: 0;
-}
-.icon-upload {
-  top: .25em;
-}
-.icon-download:before,
-.icon-upload:before {
-  content: "";
-  position: absolute;
-  left: -0.125em;
-  width: 0;
-  height: 0;
-  border-width: .25em;
-  border-style: solid;
-}
-.icon-download:before {
-  top: .5em;
-  border-color: #666 transparent transparent transparent;
-  /* #666 */
-}
-.icon-upload:before {
-  top: -0.5em;
-  border-color: transparent transparent #666 transparent;
-  /* #666 */
-}
-.icon-download:after,
-.icon-upload:after {
-  content: "";
-  position: absolute;
-  left: -0.375em;
-  width: .75em;
-  height: .125em;
-  border-width: 0 .125em .125em .125em;
-  border-style: solid;
-  border-color: #666;
-  /* #666 */
-}
-.icon-download:after {
-  top: .75em;
-}
-.icon-upload:after {
-  top: .5em;
-}
-/* Page Templates */
-.icon-tpl-full,
-.icon-tpl-side-r,
-.icon-tpl-side-l {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1em;
-  height: .25em;
-  background-color: #666;
-}
-.icon-tpl-full:after,
-.icon-tpl-side-r:before,
-.icon-tpl-side-r:after,
-.icon-tpl-side-l:before,
-.icon-tpl-side-l:after {
-  content: "";
-  position: absolute;
-  top: .3125em;
-  height: .6875em;
-  background-color: #666;
-}
-.icon-tpl-full:after,
-.icon-tpl-side-r:before,
-.icon-tpl-side-l:before {
-  left: 0;
-}
-.icon-tpl-full:after {
-  width: 1em;
-}
-.icon-tpl-side-r:before,
-.icon-tpl-side-l:after {
-  width: .6875em;
-}
-.icon-tpl-side-r:after,
-.icon-tpl-side-l:before {
-  width: .25em;
-}
-.icon-tpl-side-r:after {
-  left: .75em;
-}
-.icon-tpl-side-l:after {
-  left: .3125em;
-}
-/* Views */
-/* List view */
-.icon-list-view,
-.icon-list-view:before,
-.icon-list-view:after {
-  position: absolute;
-  width: .0625em;
-  height: .25em;
-  border-width: 0 .6875em 0 .25em;
-  border-style: solid;
-  border-color: #666;
-}
-.icon-list-view {
-  top: .0625em;
-  left: 0;
-}
-.icon-list-view:before,
-.icon-list-view:after {
-  content: "";
-  left: -0.25em;
-}
-.icon-list-view:before {
-  top: .3125em;
-}
-.icon-list-view:after {
-  top: .625em;
-}
-/* Grid view */
-.icon-grid-view,
-.icon-grid-view:before {
-  position: absolute;
-  width: .0625em;
-  height: .46875em;
-  border-width: 0 .46875em;
-  border-style: solid;
-  border-color: #666;
-}
-.icon-grid-view {
-  top: 0;
-  left: 0;
-}
-.icon-grid-view:before {
-  content: "";
-  top: .53125em;
-  left: -0.46875em;
-}
-/* Camera */
-.icon-camera {
-  position: absolute;
-  top: .25em;
-  left: 0;
-  width: .75em;
-  height: .5em;
-  background-color: #666;
-  /* #666 */
-}
-.icon-camera:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: .5em;
-  width: 0;
-  height: 0;
-  border-width: .25em;
-  border-style: solid;
-  border-color: transparent #666 transparent transparent;
-  /* #666 */
-}
-/* Image */
-.icon-image {
-  position: absolute;
-  top: .125em;
-  left: 0;
-  width: .875em;
-  height: .625em;
-  border-width: .0625em;
-  border-style: solid;
-  border-color: #666;
-  /* #666 */
-  /* for browsers that supports */
-  border-radius: .0625em;
-}
-.icon-image:before,
-.icon-image:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-color: transparent transparent #666 transparent;
-  /* #666 */
-}
-.icon-image:before {
-  left: 0;
-  border-width: .25em .25em .125em .125em;
-}
-.icon-image:after {
-  right: 0;
-  border-width: .25em .25em .375em .375em;
-}
-/* Player controls */
-/* Play */
-.icon-play {
-  position: absolute;
-  top: 0;
-  left: .1875em;
-  width: 0;
-  height: 0;
-  border-width: .5em .625em;
-  border-style: solid;
-  border-color: transparent transparent transparent #666;
-  /* #666 */
-}
-/* Stop */
-.icon-stop {
-  position: absolute;
-  top: .0625em;
-  left: .0625em;
-  width: .875em;
-  height: .875em;
-  background-color: #666;
-  /* #666 */
-}
-/* Pause */
-.icon-pause,
-.icon-pause:after {
-  position: absolute;
-  width: .25em;
-  height: .875em;
-  background-color: #666;
-  /* #666 */
-}
-.icon-pause {
-  top: .0625em;
-  left: .21875em;
-}
-.icon-pause:after {
-  content: "";
-  top: 0;
-  left: .3125em;
-}
-/* Forward, Next, Rewind and Prev */
-.icon-forward,
-.icon-next,
-.icon-rewind,
-.icon-prev,
-.icon-forward:after,
-.icon-next:before,
-.icon-rewind:after,
-.icon-prev:before {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-width: .4375em;
-  border-style: solid;
-}
-.icon-forward,
-.icon-next,
-.icon-rewind,
-.icon-prev {
-  top: .0625em;
-}
-.icon-forward:after,
-.icon-next:before,
-.icon-rewind:after,
-.icon-prev:before,
-.icon-next:after,
-.icon-prev:after {
-  content: "";
-  top: -0.4375em;
-}
-.icon-forward,
-.icon-next,
-.icon-forward:after,
-.icon-next:before {
-  border-color: transparent transparent transparent #666;
-  /* #666 */
-}
-.icon-rewind,
-.icon-prev,
-.icon-rewind:after,
-.icon-prev:before {
-  border-color: transparent #666 transparent transparent;
-  /* #666 */
-}
-.icon-forward {
-  left: .0625em;
-}
-.icon-rewind {
-  right: .0625em;
-}
-.icon-next,
-.icon-forward:after,
-.icon-next:before {
-  left: 0;
-}
-.icon-prev,
-.icon-rewind:after,
-.icon-prev:before {
-  right: 0;
-}
-.icon-next:after,
-.icon-prev:after {
-  position: absolute;
-  width: .125em;
-  height: .875em;
-  background-color: #666;
-  /* #666 */
-}
-.icon-next:after {
-  left: .4375em;
-}
-.icon-prev:after {
-  right: .4375em;
-}
-/* Stats */
-.icon-stats,
-.icon-stats:before {
-  position: absolute;
-  width: .3125em;
-  border-width: 0 .1875em;
-  border-style: solid;
-  border-color: #666;
-  /* #666 */
-}
-.icon-stats {
-  top: 0;
-  left: 0;
-  height: .875em;
-}
-.icon-stats:before {
-  content: "";
-  top: .3125em;
-  left: .0625em;
-  height: .5625em;
-}
-.icon-stats:after {
-  content: "";
-  position: absolute;
-  top: .875em;
-  left: -0.1875em;
-  width: 1em;
-  height: .125em;
-  background-color: #666;
-  /* #666 */
-}
-/* Battery */
-.icon-battery-empty,
-.icon-battery-1_4,
-.icon-battery-half,
-.icon-battery-3_4,
-.icon-battery-full {
-  position: absolute;
-  top: .25em;
-  left: 0;
-  width: .75em;
-  height: .375em;
-  border-width: .0625em;
-  border-style: solid;
-  border-color: #666;
-  /* #666 */
-  background-color: #f9f9f9;
-  /* #f9f9f9 */
-}
-.icon-battery-empty:after,
-.icon-battery-1_4:after,
-.icon-battery-half:after,
-.icon-battery-3_4:after,
-.icon-battery-full:after {
-  content: "";
-  position: absolute;
-  top: .0625em;
-  left: .8125em;
-  width: .125em;
-  height: .25em;
-  background-color: #666;
-  /* #666 */
-}
-.icon-battery-1_4:before,
-.icon-battery-half:before,
-.icon-battery-3_4:before,
-.icon-battery-full:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: .375em;
-  background-color: #666;
-  /* #999 */
-}
-.icon-battery-1_4:before {
-  width: .1875em;
-}
-.icon-battery-half:before {
-  width: .375em;
-}
-.icon-battery-3_4:before {
-  width: .5625em;
-}
-.icon-battery-full:before {
-  width: .75em;
-}
-/* Sound */
-.icon-sound-mute,
-.icon-sound-normal,
-.icon-sound-loud {
-  position: absolute;
-  top: .375em;
-  left: .09375em;
-  width: .25em;
-  height: .25em;
-  background-color: #666;
-}
-.icon-sound-mute:before,
-.icon-sound-normal:before,
-.icon-sound-loud:before {
-  content: "";
-  position: absolute;
-  top: -0.3125em;
-  left: -0.3125em;
-  width: .375em;
-  height: .375em;
-  border-width: .25em;
-  border-style: solid;
-  border-color: transparent #666 transparent transparent;
-}
-.icon-sound-normal:after,
-.icon-sound-loud:after {
-  content: "";
-  position: absolute;
-  top: -0.125em;
-  left: .625em;
-  width: .0625em;
-  height: .53125em;
-  border-style: solid;
-  border-color: #666;
-}
-.icon-sound-normal:after {
-  border-width: 0 0 0 .0625em;
-}
-.icon-sound-loud:after {
-  border-width: 0 .0625em;
-}
 @-webkit-keyframes rotating {
   100% {
     -webkit-transform: rotate(360deg);

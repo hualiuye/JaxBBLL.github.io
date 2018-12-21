@@ -81,19 +81,31 @@
     cursor: pointer;
   }
   
-  .icons-list > * {
-    margin: 0.5rem;
+  .iconos-list > span {
+    display: inline-block;
+    padding: 15px;
+    position: relative;
+  }
+  
+  .iconos-list > span:hover {
+    background-color: #38f;
+  }
+  
+  .iconos-list span:hover i {
+    color: #fff;
   }
   </style>
 </head>
 
 <body>
-  <a class="m-to-top" href="#button"><span class="icon"><span class="icon-arrowUp"></span></span></a>
+  <a class="m-to-top" href="#button">
+    <i class="iconoo-upArrow"></i>
+  </a>
   <div class="nav">
     <div class="nav-wrap">
       <a href="#button">按钮</a>
-      <a href="#icon">icon</a>
       <a href="#alert">alert</a>
+      <a href="#icon">icon</a>
       <a href="#breadcrumb">breadcrumb</a>
       <a href="#panel">面板</a>
       <a href="#list">列表组</a>
@@ -151,86 +163,58 @@
     </section>
     <section id="icon">
       <h2>图标</h2>
-      <h4>默认</h4>
-      <div class="icons-list">
-        <span class="icon"><span class="icon-home"></span></span>
-        <span class="icon"><span class="icon-arrowRight"></span></span>
-        <span class="icon"><span class="icon-arrowLeft"></span></span>
-        <span class="icon"><span class="icon-arrowDown"></span></span>
-        <span class="icon"><span class="icon-arrowUp"></span></span>
-        <span class="icon"><span class="icon-comment"></span></span>
-        <span class="icon"><span class="icon-comment-text"></span></span>
-        <span class="icon"><span class="icon-mail"></span></span>
-        <span class="icon"><span class="icon-calendar"></span></span>
-        <span class="icon"><span class="icon-plus"></span></span>
-        <span class="icon"><span class="icon-minus"></span></span>
-        <span class="icon"><span class="icon-file"></span></span>
-        <span class="icon"><span class="icon-folder"></span></span>
-        <span class="icon"><span class="icon-tag"></span></span>
-        <span class="icon"><span class="icon-desktop"></span></span>
-        <span class="icon"><span class="icon-tablet"></span></span>
-        <span class="icon"><span class="icon-phone"></span></span>
-        <span class="icon"><span class="icon-menu"></span></span>
-        <span class="icon"><span class="icon-download"></span></span>
-        <span class="icon"><span class="icon-upload"></span></span>
-        <span class="icon"><span class="icon-tpl-full"></span></span>
-        <span class="icon"><span class="icon-tpl-side-r"></span></span>
-        <span class="icon"><span class="icon-tpl-side-l"></span></span>
-        <span class="icon"><span class="icon-list-view"></span></span>
-        <span class="icon"><span class="icon-grid-view"></span></span>
-        <span class="icon"><span class="icon-camera"></span></span>
-        <span class="icon"><span class="icon-image"></span></span>
-        <span class="icon"><span class="icon-play"></span></span>
-        <span class="icon"><span class="icon-stop"></span></span>
-        <span class="icon"><span class="icon-pause"></span></span>
-        <span class="icon"><span class="icon-forward"></span></span>
-        <span class="icon"><span class="icon-next"></span></span>
-        <span class="icon"><span class="icon-rewind"></span></span>
-        <span class="icon"><span class="icon-prev"></span></span>
-        <span class="icon"><span class="icon-stats"></span></span>
-        <span class="icon"><span class="icon-battery-empty"></span></span>
-        <span class="icon"><span class="icon-battery-1_4"></span></span>
-        <span class="icon"><span class="icon-battery-half"></span></span>
-        <span class="icon"><span class="icon-battery-3_4"></span></span>
-        <span class="icon"><span class="icon-battery-full"></span></span>
-        <span class="icon"><span class="icon-sound-mute"></span></span>
-        <span class="icon"><span class="icon-sound-normal"></span></span>
-        <span class="icon"><span class="icon-sound-loud"></span></span>
-      </div>
-      <h4>方块</h4>
-      <div class="icons-list">
-        <span class="icon icon-small icon-square"><span class="icon-home"></span></span>
-        <span class="icon icon-small icon-square"><span class="icon-arrowRight"></span></span>
-        <span class="icon icon-small icon-square"><span class="icon-arrowLeft"></span></span>
-        <span class="icon icon-small icon-square"><span class="icon-arrowDown"></span></span>
-      </div>
-      <h4>圆形</h4>
-      <div class="icons-list">
-        <span class="icon icon-small icon-rounded"><span class="icon-home"></span></span>
-        <span class="icon icon-small icon-rounded"><span class="icon-arrowRight"></span></span>
-        <span class="icon icon-small icon-rounded"><span class="icon-arrowLeft"></span></span>
-        <span class="icon icon-small icon-rounded"><span class="icon-arrowDown"></span></span>
-      </div>
-      <h4>尺寸：小/默认/中/大</h4>
-      <div>
-        <p>
-          <span class="icon icon-small"><span class="icon-home"></span></span>
-          <span class="icon"><span class="icon-home"></span></span>
-          <span class="icon icon-mid"><span class="icon-home"></span></span>
-          <span class="icon icon-large"><span class="icon-home"></span></span>
-        </p>
-        <p>
-          <span class="icon icon-square icon-small"><span class="icon-home"></span></span>
-          <span class="icon icon-square "><span class="icon-home"></span></span>
-          <span class="icon icon-square icon-mid"><span class="icon-home"></span></span>
-          <span class="icon icon-square icon-large"><span class="icon-home"></span></span>
-        </p>
-        <p>
-          <span class="icon icon-rounded icon-small"><span class="icon-home"></span></span>
-          <span class="icon icon-rounded"><span class="icon-home"></span></span>
-          <span class="icon icon-rounded icon-mid"><span class="icon-home"></span></span>
-          <span class="icon icon-rounded icon-large"><span class="icon-home"></span></span>
-        </p>
+      <h4>使用 icono</h4>
+      <div class="iconos-list">
+        <span title="iconoo-pin"><i class="iconoo-pin"></i></span>
+        <span title="iconoo-locationArrow"><i class="iconoo-locationArrow"></i></span>
+        <span><i class="iconoo-sync"></i></span>
+        <span><i class="iconoo-reset"></i></span>
+        <span><i class="iconoo-share"></i></span>
+        <span><i class="iconoo-search"></i></span>
+        <span><i class="iconoo-home"></i></span>
+        <span><i class="iconoo-bars"></i></span>
+        <span><i class="iconoo-ellipsis"></i></span>
+        <span><i class="iconoo-tiles"></i></span>
+        <span><i class="iconoo-list"></i></span>
+        <span><i class="iconoo-smile"></i></span>
+        <span><i class="iconoo-frown"></i></span>
+        <span><i class="iconoo-meh"></i></span>
+        <span><i class="iconoo-volume"></i></span>
+        <span><i class="iconoo-volumeLow"></i></span>
+        <span><i class="iconoo-volumeMedium"></i></span>
+        <span><i class="iconoo-volumeHigh"></i></span>
+        <span><i class="iconoo-volumeDecrease"></i></span>
+        <span><i class="iconoo-volumeIncrease"></i></span>
+        <span><i class="iconoo-volumeMute"></i></span>
+        <span><i class="iconoo-play"></i></span>
+        <span><i class="iconoo-pause"></i></span>
+        <span><i class="iconoo-stop"></i></span>
+        <span><i class="iconoo-rewind"></i></span>
+        <span><i class="iconoo-forward"></i></span>
+        <span><i class="iconoo-next"></i></span>
+        <span><i class="iconoo-previous"></i></span>
+        <span><i class="iconoo-rightArrow"></i></span>
+        <span><i class="iconoo-leftArrow"></i></span>
+        <span><i class="iconoo-upArrow"></i></span>
+        <span><i class="iconoo-downArrow"></i></span>
+        <span><i class="iconoo-check"></i></span>
+        <span><i class="iconoo-checkCircle"></i></span>
+        <span><i class="iconoo-cross"></i></span>
+        <span><i class="iconoo-crossCircle"></i></span>
+        <span><i class="iconoo-plus"></i></span>
+        <span><i class="iconoo-plusCircle"></i></span>
+        <span><i class="iconoo-caretRight"></i></span>
+        <span><i class="iconoo-caretLeft"></i></span>
+        <span><i class="iconoo-caretUp"></i></span>
+        <span><i class="iconoo-caretDown"></i></span>
+        <span><i class="iconoo-caretRightCircle"></i></span>
+        <span><i class="iconoo-caretLeftCircle"></i></span>
+        <span><i class="iconoo-caretUpCircle"></i></span>
+        <span><i class="iconoo-caretDownCircle"></i></span>
+        <span><i class="iconoo-caretRightSquare"></i></span>
+        <span><i class="iconoo-caretLeftSquare"></i></span>
+        <span><i class="iconoo-caretUpSquare"></i></span>
+        <span><i class="iconoo-caretDownSquare"></i></span>
       </div>
     </section>
     <section id="breadcrumb">
